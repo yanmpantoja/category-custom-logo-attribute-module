@@ -84,6 +84,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
 
             if ($logoImage) {
                 $html .= '<img class="category_logo_image" src="' . $this->_storeManager->getStore()->getBaseUrl(UrlInterfaceAlias::URL_TYPE_MEDIA) . 'catalog/category/' . $customCategory->getData('category_logo_image') . '" alt="Logo">';
+                $outermostClassCode = ' class="category_logo_image_link ' . $outermostClass . '" ';
             }
 
             $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '><span>' . $this->escapeHtml(
